@@ -10,6 +10,7 @@ ZigBee-TutorialTimbre
 ### Descripción
 
 Tutorial para realizar un timbre (zumbador) accionado por un pulsador, que se comunicará de forma inalámbrica, mediante motas Zigbee y usando como base de los circuitos 2 Arduinos.
+
 Se han seguido los pasos del libro "Building Wireless Sensor Networks".
 
 
@@ -25,10 +26,10 @@ Se han seguido los pasos del libro "Building Wireless Sensor Networks".
 ###Configuración de los Zigbee
 
 Un Zigbee tiene que ser asignado como coordinador, y el otro como router. Para ello nos vamos a la pestaña de XCTU de "Modem Configuration" y le asignamos los distintos roles
-![asignar coordinador y router]() 
+[asignar coordinador y router]() 
 
 
-Los 2 tendrán el mismo PAN ID y configuraremos la "Destination address high" (0013A200) y "Destination address low" del otro Zigbee. Estos valores los podemos ver en la etiqueta [detrás de la mota]():
+Los 2 tendrán el mismo PAN ID y configuraremos la "Destination address high" (0013A200) y "Destination address low" del otro Zigbee. Estos valores los podemos ver en la etiqueta [detrás de la mota](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/detras%20de%20la%20mota.png):
 
 
 
@@ -39,20 +40,16 @@ Los puedes consultar en [este mismo repositorio]()
 
 ###Esquemas de conexión
 
-El esquema de conexión entre el Arduino y el pulsador:
-
-![pulsador]()  realizado a partir de [este circuito]()  
+El esquema de conexión entre el Arduino y el pulsador, realizado a partir de ![circuito pulsador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20pulsador.jpg)  
 
 
-y el esquema de conexión del Arduino y el zumbador:
-
-![zumbador]()  realizado a partir de [este circuito]()  
+y el esquema de conexión del Arduino y el zumbador, realizado a partir de ![circuito zumbador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20zumbador.jpg)  
 
 
 
-En nuestro modelo puedes ver las fotos del [pulsador]() y del [zumbador](), y el timbre total que nos resultó fue:
+En nuestro modelo puedes ver las fotos del [pulsador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/pulsador.jpg) y del [zumbador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/zumbador.jpg), y el timbre total que nos resultó fue:
 
-![final]()
+![final](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/final2.jpg)
 
 
 ###Timbre funcionando
@@ -61,7 +58,7 @@ En nuestro modelo puedes ver las fotos del [pulsador]() y del [zumbador](), y el
 
 
 ###Materiales
-En este mismo repositorio puedes ver los [esquemas de los circuitos]() y los códigos de [Arduino]()
+En este mismo repositorio puedes ver los [esquemas de los circuitos](https://github.com/JCristobal/ZigBee-TutorialTimbre/tree/master/Esquemas) y los códigos de [Arduino]()
 
 
 
