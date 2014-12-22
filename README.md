@@ -1,7 +1,7 @@
 ZigBee-TutorialTimbre
 =====================
 
-# Tutorial básico para hacer un timbre activado por un pulsador usando Zigbee sobre Arduino
+# Tutorial básico para hacer un timbre activado por un pulsador, usando Zigbee sobre Arduino
 
 
 ***
@@ -25,12 +25,17 @@ Se han seguido los pasos del libro "Building Wireless Sensor Networks".
 
 ###Configuración de los Zigbee
 
-Un Zigbee tiene que ser asignado como coordinador, y el otro como router. Para ello nos vamos a la pestaña de XCTU de "Modem Configuration" y le asignamos los distintos roles
-[asignar coordinador y router]() 
+Un Zigbee tiene que ser asignado como coordinador, y el otro como router. Para ello nos vamos a la pestaña de XCTU de "update firmware" y le asignamos los distintos roles
+
+[asignar coordinador](http://i.imgur.com/KJNrSfC.png) 
+ 
+Para asignar router sería lo mismo, pero escogiendo la opción "Zigbee Router AT"
 
 
-Los 2 tendrán el mismo PAN ID y configuraremos la "Destination address high" (0013A200) y "Destination address low" del otro Zigbee. Estos valores los podemos ver en la etiqueta [detrás de la mota](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/detras%20de%20la%20mota.png):
+Los 2 tendrán el mismo PAN ID y configuraremos la "Destination address high" (0013A200) y "Destination address low" del otro Zigbee. Estos valores los podemos ver en la etiqueta [detrás de la mota](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/detras%20de%20la%20mota.png).
 
+
+[En este tutorial se puede ver una configuración de los Zigbee](https://alselectro.wordpress.com/2014/09/07/xbee-s2digital-sampling-with-api-frame-data/)
 
 
 ###Configuración de los Arduino
