@@ -40,10 +40,15 @@ Los puedes consultar en [este mismo repositorio]()
 
 ###Esquemas de conexión
 
-El esquema de conexión entre el Arduino y el pulsador, realizado a partir de ![circuito pulsador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20pulsador.jpg)  
+El esquema de conexión entre el Arduino y el pulsador, realizado a partir del circuito:
+
+![circuito pulsador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20pulsador.jpg)  
 
 
-y el esquema de conexión del Arduino y el zumbador, realizado a partir de ![circuito zumbador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20zumbador.jpg)  
+y el esquema de conexión del Arduino y el zumbador, realizado a partir del circuito:
+
+![circuito zumbador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20zumbador.jpg)  
+
 
 
 
