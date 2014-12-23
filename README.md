@@ -1,7 +1,7 @@
 ZigBee-TutorialTimbre
 =====================
 
-# Tutorial básico para hacer un timbre activado por un pulsador, usando Zigbee sobre Arduino
+# Tutorial básico para hacer un timbre activado por un pulsador, usando ZigBee sobre Arduino
 
 
 ***
@@ -9,66 +9,85 @@ ZigBee-TutorialTimbre
 
 ### Descripción
 
-Tutorial para realizar un timbre (zumbador) accionado por un pulsador, que se comunicará de forma inalámbrica, mediante motas Zigbee y usando como base de los circuitos 2 Arduinos.
+Tutorial para realizar una introducción a la programación utilizando motas que implementan el protocolo ZigBee. El sistema comunica un pulsador con un zumbador.
 
-Se han seguido los pasos del libro "Building Wireless Sensor Networks".
+
+Se han seguido los pasos del libro "Building Wireless Sensor Networks", de Robert Faludi.
 
 
 ###Herramientas a utilizar
 
 + 2 Arduino UNO
-+ 2 motas Zigbee
++ 2 motas ZigBee (aquú hemos usado XBee)
++ 1 XBee Explorer USB (programador)
++ 2 XBee Explorer Regulated (adaptador)
 + Zumbador básico
-+ Pulsador 
++ Pulsador
++ Protoboard
 + Software para configuración de las motas: XCTU
 
 
-###Configuración de los Zigbee
 
-Un Zigbee tiene que ser asignado como coordinador, y el otro como router. Para ello nos vamos a la pestaña de XCTU de "update firmware" y le asignamos los distintos roles
+###Configuración de los ZigBee
 
-[asignar coordinador](http://i.imgur.com/KJNrSfC.png) 
- 
-Para asignar router sería lo mismo, pero escogiendo la opción "Zigbee Router AT"
+Un ZigBee tiene que ser asignado como coordinador, y el otro como router. Para ello nos vamos a la pestaña de XCTU de "update firmware" y le asignamos los distintos roles.
 
+![Asignar coordinador](http://i.imgur.com/KJNrSfC.png)
 
-Los 2 tendrán el mismo PAN ID y configuraremos la "Destination address high" (0013A200) y "Destination address low" del otro Zigbee. Estos valores los podemos ver en la etiqueta [detrás de la mota](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/detras%20de%20la%20mota.png).
+Para asignar router sería lo mismo, pero escogiendo la opción "ZigBee Router AT". Este proceso puede tardar unos minutos. Es aconsejable que escojamos la última versión.
 
 
-[En este tutorial se puede ver una configuración de los Zigbee](https://alselectro.wordpress.com/2014/09/07/xbee-s2digital-sampling-with-api-frame-data/)
+A los dos se les asignará la misma PAN ID (es la dirección de la red en la que se comunicarán) y configuraremos la "Destination address high" y "Destination address low" del otro ZigBee. Estos valores los podemos ver en la parte de atrás de la mota.
+
+![Detrás de la mota](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/detras%20de%20la%20mota.png).
+
+*Los la primera fila corresponde a "Destination addres high" y la segunda a "Destination address low"*.
+
+La mota configurada como router será la que tenga conectada el pulsador y la configurada como coordinador, el zumbador.
+
+[Para ver más detalladamente la configuración de las motas, puedes ver este tutorial](https://alselectro.wordpress.com/2014/09/07/xbee-s2digital-sampling-with-api-frame-data/)
+
 
 
 ###Configuración de los Arduino
 
-Los puedes consultar en [este mismo repositorio]()
+Simplemente será necesario cargar los programas que se adjuntan.
+
++ [Programa para Arduino conectado a ZigBee router](src/router.ino)
++ [Programa para Arduino conectado a ZigBee coordinador](src/coordinador.ino)
 
 
 ###Esquemas de conexión
 
 El esquema de conexión entre el Arduino y el pulsador, realizado a partir del circuito:
 
-![circuito pulsador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20pulsador.jpg)  
+![Circuito pulsador](Esquemas/esquema%20pulsador.jpg)  
 
 
 y el esquema de conexión del Arduino y el zumbador, realizado a partir del circuito:
 
-![circuito zumbador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/Esquemas/esquema%20zumbador.jpg)  
+![Circuito zumbador](Esquemas/esquema%20zumbador.jpg)  
 
 
 
+##Resultado
 
-En nuestro modelo puedes ver las fotos del [pulsador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/pulsador.jpg) y del [zumbador](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/zumbador.jpg), y el timbre total que nos resultó fue:
+**Circuito del pulsador**
 
-![final](https://github.com/JCristobal/ZigBee-TutorialTimbre/blob/master/im%C3%A1genes/final2.jpg)
+![Pulsador](im%C3%A1genes/pulsador.jpg)
+
+**Circuito del zumbador**
+
+![Zumbador](im%C3%A1genes/zumbador.jpg)
 
 
-###Timbre funcionando
+![Final](im%C3%A1genes/final2.jpg)
+
+
+####Timbre funcionando
 
 [Vídeo del timbre funcionando]()
 
-
-###Materiales
-En este mismo repositorio puedes ver los [esquemas de los circuitos](https://github.com/JCristobal/ZigBee-TutorialTimbre/tree/master/Esquemas) y los códigos de [Arduino]()
 
 
 
@@ -76,3 +95,7 @@ En este mismo repositorio puedes ver los [esquemas de los circuitos](https://git
 
 + Israel Blancas Álvarez
 + José Cristóbal López Zafra
+
+
+
+[Super Mario Theme para buzzer y Arduino](http://www.princetronics.com/supermariothemesong/)
